@@ -1,0 +1,32 @@
+{
+	"name": "node-typescript",
+	"version": "1.0.0",
+	"description": "Node-TypeScript is a personal project demonstrating a RESTful api built with Node.js, Express.js, TypeScript & MongoDB",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node dist/app.js",
+		"dev": "nodemon src/app.ts",
+		"build": "tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sumit-Mondal/NODE-TYPESCRIPT.git"
+	},
+	"author": "Sumit Mondal",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Sumit-Mondal/NODE-TYPESCRIPT/issues"
+	},
+	"homepage": "https://github.com/Sumit-Mondal/NODE-TYPESCRIPT#readme",
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.6",
+		"@types/node": "^14.0.9",
+		"nodemon": "^2.0.4",
+		"ts-node": "^8.10.2",
+		"typescript": "^3.9.3"
+	}
+}
