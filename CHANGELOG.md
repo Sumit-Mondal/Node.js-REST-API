@@ -4,13 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.4.0] - 2020-06-04
+
+### Changed
+
+- Chained existing routes for accessing all tours related data.
+
 ## [0.3.0] - 2020-06-03
 
-## Added
+### Added
 
 - Routes for accessing all tours related data.
 
-## Changed
+### Changed
 
 - README.md file.
 
