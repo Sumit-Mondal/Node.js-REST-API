@@ -10,7 +10,7 @@ Use the terminal to clone the repository.
 git clone https://github.com/Sumit-Mondal/NODE-TYPESCRIPT.git
 ```
 
-Use the Node Package Manager (npm) to install all the project dependencies.
+Use the node-package-manager (npm) to install all the project dependencies.
 
 ```bash
 npm install
