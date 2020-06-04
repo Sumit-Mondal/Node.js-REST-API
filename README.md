@@ -1,13 +1,13 @@
-# NODE-TYPESCRIPT
+# Node.js-REST-API
 
-NODE-TYPESCRIPT is a personal project demonstrating a RESTful api built with Node.js, Express.js, TypeScript & MongoDB.
+'Node.js REST API' is personal project that demonstrates a RESTful API built with TypeScript, Node.js, Express.js, MongoDB & Redis.
 
 ## Installation
 
 Use the terminal to clone the repository.
 
 ```bash
-git clone https://github.com/Sumit-Mondal/NODE-TYPESCRIPT.git
+git clone https://github.com/Sumit-Mondal/Node.js-REST-API.git
 ```
 
 Use the node-package-manager (npm) to install all the project dependencies.
