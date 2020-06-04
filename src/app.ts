@@ -2,15 +2,28 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 // Importing the necessary functions from the body-parser module.
 import bodyParser from "body-parser";
+// Importing the necessary modules for creating a logger.
+import path from "path";
+import morgan from "morgan";
+import rfs, { RotatingFileStream, createStream } from "rotating-file-stream";
 
 // Creating an express application
 const app: Application = express();
 
+// Creating a rotating write system
+const accessLogStream: RotatingFileStream = createStream("access.log", {
+	interval: "1d",
+	path: path.join(__dirname, "../log"),
+});
+
 // Middleware functions
-app.use(bodyParser.json()); /* parse application/json */
+app.use(
+	morgan("combined", { stream: accessLogStream })
+); /* Setting up the logger */
+app.use(bodyParser.json()); /* parsing application/json */
 app.use(
 	bodyParser.urlencoded({ extended: false })
-); /* parse application/x-www-form-urlencoded */
+); /* parsing application/x-www-form-urlencoded */
 
 // Route handlers
 const baseRoute = (req: Request, res: Response) => {
