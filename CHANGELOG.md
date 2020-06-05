@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.9] - 2020-06-05
+
+### Added
+
+- Middleware to check for required body parameters in POST routes of tourRouter & userRouter.
+
 ## [0.1.8] - 2020-06-05
 
 ### Added

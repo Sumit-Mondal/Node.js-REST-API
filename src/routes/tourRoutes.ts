@@ -10,7 +10,10 @@ const router: Router = Router();
 router.param("id", tourController.checkId);
 
 // Routes
-router.route("/").get(tourController.getTours).post(tourController.createTour);
+router
+	.route("/")
+	.get(tourController.getTours)
+	.post(tourController.checkBody, tourController.createTour);
 
 router
 	.route("/:id")

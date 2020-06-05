@@ -10,7 +10,10 @@ const router: Router = Router();
 router.param("id", userController.checkId);
 
 // Routes
-router.route("/").get(userController.getUsers).post(userController.createUser);
+router
+	.route("/")
+	.get(userController.getUsers)
+	.post(userController.checkBody, userController.createUser);
 
 router
 	.route("/:id")

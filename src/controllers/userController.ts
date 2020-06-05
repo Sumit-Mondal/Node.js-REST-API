@@ -9,6 +9,12 @@ exports.checkId = (
 	value: string | number
 ) => {
 	console.log(`ID received: ${value}`);
+	console.log(`Check if ID is valid or not.`);
+	next();
+};
+
+exports.checkBody = (req: Request, res: Response, next: NextFunction) => {
+	console.log(`Check for required parameters in the request body.`);
 	next();
 };
 
