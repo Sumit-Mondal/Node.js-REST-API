@@ -1,7 +1,17 @@
 // Importing the necessary interfaces from the express module
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 
 // Users controllers
+exports.checkId = (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+	value: string | number
+) => {
+	console.log(`ID received: ${value}`);
+	next();
+};
+
 exports.getUsers = (req: Request, res: Response) => {
 	res.status(200).json({
 		status: "success",

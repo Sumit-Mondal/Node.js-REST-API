@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [0.7.0] - 2020-06-05
+## [0.1.8] - 2020-06-05
+
+### Added
+
+- Param middleware in tourRouter & userRouter.
+
+### Changed
+
+- Versioning system in CHANGELOG.md file.
+
+## [0.1.7] - 2020-06-05
 
 ### Added
 
@@ -16,25 +26,25 @@ All notable changes to this project will be documented in this file.
 - app.ts file.
 - NPM scripts in package.json file to start the application from server.ts file.
 
-## [0.6.0] - 2020-06-04
+## [0.1.6] - 2020-06-04
 
 ### Added
 
 - Routes for accessing all users related data.
 
-## [0.5.0] - 2020-06-04
+## [0.1.5] - 2020-06-04
 
 ### Added
 
 - Rotating file logger with Morgan.
 
-## [0.4.0] - 2020-06-04
+## [0.1.4] - 2020-06-04
 
 ### Changed
 
 - Chained existing routes for accessing all tours related data.
 
-## [0.3.0] - 2020-06-03
+## [0.1.3] - 2020-06-03
 
 ### Added
 
@@ -44,7 +54,7 @@ All notable changes to this project will be documented in this file.
 
 - README.md file.
 
-## [0.2.0] - 2020-06-03
+## [0.1.2] - 2020-06-03
 
 ### Added
 
@@ -54,7 +64,7 @@ All notable changes to this project will be documented in this file.
 
 - README.md file.
 
-## [0.1.0] - 2020-06-03
+## [0.1.1] - 2020-06-03
 
 ### Added
 
