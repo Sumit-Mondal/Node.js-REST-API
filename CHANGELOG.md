@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.10] - 2020-06-06
+
+### Added
+
+- Configuration files for Development, Production & Test environments.
+- Connection to the remote mongoDB database.
+
 ## [0.1.9] - 2020-06-05
 
 ### Added

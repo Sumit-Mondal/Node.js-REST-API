@@ -1,0 +1,8 @@
+{
+	"name": "Node.js REST API - Test",
+	"db": {
+		"name": "Test Database",
+		"connection_string": "mongodb+srv://sumit_mondal:<password>5@cluster0-s5i47.mongodb.net/Node-REST-Test?retryWrites=true&w=majority",
+		"password": "Bongaon743235"
+	}
+}

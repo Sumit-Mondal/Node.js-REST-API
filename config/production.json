@@ -1,0 +1,8 @@
+{
+	"name": "Node.js REST API - Production",
+	"db": {
+		"name": "Production Database",
+		"connection_string": "mongodb+srv://sumit_mondal:<password>@cluster0-s5i47.mongodb.net/Node-REST-Prod?retryWrites=true&w=majority",
+		"password": "Bongaon743235"
+	}
+}
