@@ -1,6 +1,8 @@
 // Importing the application configurations
 import config from "config";
+// Importing necessary functions from the mongoose module
 import { connect } from "mongoose";
+
 // Importing the express application
 const app = require("./app");
 

@@ -6,14 +6,8 @@ const userController = require("./../controllers/userController");
 // Creating the tourRouter
 const router: Router = Router();
 
-// Param middleware
-router.param("id", userController.checkId);
-
 // Routes
-router
-	.route("/")
-	.get(userController.getUsers)
-	.post(userController.checkBody, userController.createUser);
+router.route("/").get(userController.getUsers).post(userController.createUser);
 
 router
 	.route("/:id")

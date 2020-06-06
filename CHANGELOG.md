@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.11] - 2020-06-06
+
+### Added
+
+- Database model for Tours collection from the tourSchema.
+
+### Changed
+
+- Controller logic for creating a new tour in the database.
+
+### Removed
+
+- Param middleware in tourRouter & userRouter.
+
 ## [0.1.10] - 2020-06-06
 
 ### Added

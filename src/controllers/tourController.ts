@@ -1,23 +1,10 @@
 // Importing the necessary interfaces from the express module
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
+
+// Importing the database model
+const Tour = require("./../models/tourModel");
 
 // Tour controllers
-exports.checkId = (
-	req: Request,
-	res: Response,
-	next: NextFunction,
-	value: string | number
-) => {
-	console.log(`ID received: ${value}`);
-	console.log(`Check if ID is valid or not.`);
-	next();
-};
-
-exports.checkBody = (req: Request, res: Response, next: NextFunction) => {
-	console.log(`Check for required parameters in the request body.`);
-	next();
-};
-
 exports.getTours = (req: Request, res: Response) => {
 	res.status(200).json({
 		status: "success",
@@ -37,13 +24,21 @@ exports.getTour = (req: Request, res: Response) => {
 	});
 };
 
-exports.createTour = (req: Request, res: Response) => {
-	res.status(201).json({
-		status: "success",
-		data: {
-			tour: "newly created tour details.",
-		},
-	});
+exports.createTour = async (req: Request, res: Response) => {
+	try {
+		const newTour = await Tour.create(req.body);
+		res.status(201).json({
+			status: "success",
+			data: {
+				tour: newTour,
+			},
+		});
+	} catch (err) {
+		res.status(400).json({
+			status: "fail",
+			message: err,
+		});
+	}
 };
 
 exports.updateTour = (req: Request, res: Response) => {
