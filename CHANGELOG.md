@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.12] - 2020-06-06
+
+### Changed
+
+- Controller logic of all the routes for accessing all tours related data.
+
 ## [0.1.11] - 2020-06-06
 
 ### Added

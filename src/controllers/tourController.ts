@@ -5,23 +5,39 @@ import { Request, Response } from "express";
 const Tour = require("./../models/tourModel");
 
 // Tour controllers
-exports.getTours = (req: Request, res: Response) => {
-	res.status(200).json({
-		status: "success",
-		results: "length of the tours array",
-		data: {
-			tours: "tours array",
-		},
-	});
+exports.getTours = async (req: Request, res: Response) => {
+	try {
+		const tours = await Tour.find();
+		res.status(200).json({
+			status: "success",
+			results: tours.length,
+			data: {
+				tours,
+			},
+		});
+	} catch (err) {
+		res.status(404).json({
+			status: "fail",
+			message: err,
+		});
+	}
 };
 
-exports.getTour = (req: Request, res: Response) => {
-	res.status(200).json({
-		status: "success",
-		data: {
-			tour: "specific tour details",
-		},
-	});
+exports.getTour = async (req: Request, res: Response) => {
+	try {
+		const tour = await Tour.findById(req.params.id);
+		res.status(200).json({
+			status: "success",
+			data: {
+				tour,
+			},
+		});
+	} catch (err) {
+		res.status(404).json({
+			status: "fail",
+			message: err,
+		});
+	}
 };
 
 exports.createTour = async (req: Request, res: Response) => {
@@ -41,18 +57,37 @@ exports.createTour = async (req: Request, res: Response) => {
 	}
 };
 
-exports.updateTour = (req: Request, res: Response) => {
-	res.status(200).json({
-		status: "success",
-		data: {
-			tour: "updated tour details",
-		},
-	});
+exports.updateTour = async (req: Request, res: Response) => {
+	try {
+		const tour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
+			new: true,
+			runValidators: true,
+		});
+		res.status(200).json({
+			status: "success",
+			data: {
+				tour,
+			},
+		});
+	} catch (err) {
+		res.status(404).json({
+			status: "fail",
+			message: err,
+		});
+	}
 };
 
-exports.deleteTour = (req: Request, res: Response) => {
-	res.status(200).json({
-		status: "success",
-		data: null,
-	});
+exports.deleteTour = async (req: Request, res: Response) => {
+	try {
+		await Tour.findByIdAndDelete(req.params.id);
+		res.status(204).json({
+			status: "success",
+			data: null,
+		});
+	} catch (err) {
+		res.status(404).json({
+			status: "fail",
+			message: err,
+		});
+	}
 };
