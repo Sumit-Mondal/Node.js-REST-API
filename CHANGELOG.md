@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.13] - 2020-06-07
+
+### Changed
+
+- Document schema of the Tours model.
+
 ## [0.1.12] - 2020-06-06
 
 ### Changed
