@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.15] - 2020-06-07
+
+### Added
+
+- Sorting feature in the route for getting all the tours.
+
 ## [0.1.14] - 2020-06-07
 
 ### Added
