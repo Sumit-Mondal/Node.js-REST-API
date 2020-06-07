@@ -9,9 +9,8 @@ const app = require("./app");
 // Function for getting the database connection string
 function getConnectionString(): string {
 	let db_connection_string: string = config.get("db.connection_string");
-	const replaceable_part: RegExp = /\<password>/gi;
 	return db_connection_string.replace(
-		replaceable_part,
+		/\<password>/gi,
 		config.get("db.password")
 	);
 }

@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.14] - 2020-06-07
+
+### Added
+
+- Complex querying in the route for getting all the tours.
+
+### Changed
+
+- Function for getting the database connection string.
+
 ## [0.1.13] - 2020-06-07
 
 ### Changed

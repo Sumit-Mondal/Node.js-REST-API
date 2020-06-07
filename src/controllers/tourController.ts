@@ -7,7 +7,21 @@ const Tour = require("./../models/tourModel");
 // Tour controllers
 exports.getTours = async (req: Request, res: Response) => {
 	try {
-		const tours = await Tour.find();
+		// Build query
+		const queryObj = { ...req.query };
+
+		const excludedFields: string[] = ["page", "sort", "limit", "fields"];
+		excludedFields.forEach((el: string) => delete queryObj[el]);
+
+		let queryStr: string = JSON.stringify(queryObj);
+		queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (param) => `$${param}`);
+
+		const query = Tour.find(JSON.parse(queryStr));
+
+		// Execute query
+		const tours = await query;
+
+		// Send the response
 		res.status(200).json({
 			status: "success",
 			results: tours.length,
