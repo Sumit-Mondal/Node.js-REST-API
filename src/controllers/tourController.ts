@@ -32,8 +32,30 @@ exports.getTours = async (req: Request, res: Response) => {
 			query = query.select("-__v");
 		}
 
+		let page: number;
+		let limit: number;
+		if (req.query.page) {
+			page = parseInt(req.query.page.toString());
+		} else {
+			page = 1;
+		}
+
+		if (req.query.limit) {
+			limit = parseInt(req.query.limit.toString());
+		} else {
+			limit = 100;
+		}
+
+		const skip: number = (page - 1) * limit;
+
+		query = query.skip(skip).limit(limit);
+
 		// Execute query
 		const tours = await query;
+
+		if (req.query.page && tours.length === 0) {
+			throw new Error(`This page doesn't exist.`);
+		}
 
 		// Send the response
 		res.status(200).json({
