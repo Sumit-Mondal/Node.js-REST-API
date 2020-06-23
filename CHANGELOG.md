@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.18] - 2020-06-23
+
+### Added
+
+- APIFeatures in the utils directory.
+
 ## [0.1.17] - 2020-06-15
 
 ### Added
